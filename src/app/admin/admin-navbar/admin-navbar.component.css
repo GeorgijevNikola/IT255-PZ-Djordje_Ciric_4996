@@ -1,0 +1,177 @@
+/* Hover efekat za navigacijske linkove */
+.nav-link:hover {
+    transition: color 0.4s ease-in-out;
+    color: #ffdd57; /* Promena boje linka pri hoveru */
+  }
+  
+  /* Ikonice za kolapsirajuće linkove koristeći FontAwesome */
+  .nav-link-collapse:after {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out;
+    content: '\f067'; /* Plus ikonica */
+    font-family: 'FontAwesome';
+    margin-left: 10px;
+  }
+  
+  /* Rotacija ikonice kada je podmeni otvoren */
+  .nav-link-show:after {
+    transform: rotate(180deg);
+  }
+  
+  /* Podmeni navigacijski stilovi */
+  .nav-item ul.nav-second-level {
+    padding-left: 30px;
+  }
+  
+  .nav-item ul.nav-second-level > .nav-item {
+    padding-left: 20px;
+  }
+  
+  /* Stilovi za sidebar za ekrane veće od 992px */
+  @media (min-width: 992px) {
+    .sidenav {position: fixed; /* Promenjeno sa 'absolute' na 'fixed' */
+        top: 56px; /* Visina vašeg navbara */
+        left: 0;
+        width: 230px;
+        height: calc(100vh - 56px); /* Prilagođeno za visinu navbara */
+        background: #343a40;
+        overflow-y: auto; /* Dodaje skrol bar ako je sadržaj duži od visine ekrana */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dodaje senku za bolji vizualni efekat */
+        }
+        
+        .navbar-expand-lg .sidenav {
+        flex-direction: column;
+        }
+        
+        .content-wrapper {
+        margin-left: 230px; /* Odstupanje sadrž
+        
+        aja u skladu sa širinom sidebar-a /
+        transition: margin-left 0.4s; / Glatak prelaz za marginu */
+        }
+        
+        /* Dodatni stilovi za bolji vizuelni izgled /
+        .content-wrapper {
+        padding: 20px;
+        background-color: #f8f9fa; / Svjetlija boja pozadine za glavni sadržaj */
+        }
+        /* Stilovi za sidebar za ekrane veće od 992px */
+@media (min-width: 992px) {
+    .sidenav {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      width: 230px;
+      height: calc(100vh - 56px);
+      background: #343a40;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  
+    .navbar-expand-lg .sidenav {
+      flex-direction: column;
+    }
+  
+    .content-wrapper {
+      margin-left: 230px;
+      transition: margin-left 0.4s;
+    }
+  
+    /* Glavni sadržaj stilovi */
+    .content-wrapper {
+      padding: 0px;
+      background-color: #f8f9fa;
+      /* Za poboljšanje čitljivosti,
+  možete dodati blagu senku unutar okvira sadržaja */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Osigurava da je sadržaj centriran i dobro raspoređen */
+  .container-fluid {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  }
+  }
+  
+  /* Stilovi za mobilne uređaje */
+  @media (max-width: 991px) {
+  .sidenav {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #343a40;
+  padding-bottom: 10px;
+  }
+  
+  .navbar-toggler {
+  /* Poboljšanje vidljivosti ikonice za kolaps */
+  border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .content-wrapper {
+  margin-left: 0;
+  padding: 10px;
+  }
+  }
+
+
+  /* Dodajte ovo u vaš user-list.component.css fajl */
+
+/* Stilizovanje tabele */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  /* Zajednički stilovi za zaglavlje tabele */
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* Stilizovanje ćelija tabele */
+  .table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Stilizovanje redova na hover */
+  .table-hover tbody tr:hover {
+    color: #212529;
+    background-color: rgba(0,0,0,.075);
+  }
+  
+  /* Dugmad za akcije u tabeli */
+  .table td > button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Stilizovanje dugmeta za izmenu */
+  .table td > button:nth-child(1) {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  /* Stilizovanje dugmeta za brisanje */
+  .table td > button:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Dodavanje malo prostora oko tabele */
+  .table-container {
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+  }

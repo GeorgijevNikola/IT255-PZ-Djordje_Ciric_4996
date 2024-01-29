@@ -1,0 +1,28 @@
+<!-- Kreirano od strane "DarkCode" -->
+
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+    <h1>Prijava</h1>
+
+    <div class="txtb">
+      <input type="text" placeholder="Korisničko ime" formControlName="email">
+    </div>
+
+    <div class="txtb">
+      <input type="password" placeholder="Lozinka" formControlName="password">
+    </div>
+
+    <input type="submit" class="logbtn" value="Prijavi se" [disabled]="!loginForm.valid">
+
+    <div class="bottom-text">
+      Nemate nalog? <a routerLink="/register">Registrujte se</a>
+    </div>
+  </form>
+
+  <!-- PETAR ARSIĆ 5171 -->
+</body>
+</html>

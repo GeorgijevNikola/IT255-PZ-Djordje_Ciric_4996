@@ -1,0 +1,25 @@
+<app-admin-navbar></app-admin-navbar>
+
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <br />
+  <h2 class="mt-1">Dodaj komponentu</h2>
+  <div class="container">
+    <form [formGroup]="dodajKomponentuForm" (ngSubmit)="onSubmit()">
+     
+      <div class="form-group">
+        <label for="componentName">Naziv Komponente</label>
+        <input type="text" class="form-control" id="componentName" formControlName="componentName">
+      </div>
+      <div class="form-group">
+        <label for="description">Opis</label>
+        <input type="text" class="form-control" id="description" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="price">Cena</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+      </div>
+      <button type="submit" class="btn btn-primary">Dodaj Komponentu</button>
+    </form>
+  </div>
+</main>

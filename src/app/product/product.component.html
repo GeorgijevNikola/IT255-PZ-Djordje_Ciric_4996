@@ -1,0 +1,40 @@
+<app-guest-navbar></app-guest-navbar>
+<router-outlet></router-outlet>
+
+<!-- Vitrina -->
+<header class="showcase">
+    <h2>Naše Ponude</h2>
+    <p>
+        Izaberite iz našeg asortimana PC komponenata - ostvarite uštede dok traju zalihe
+    </p>
+    <a href="#" class="btn">
+        Kupite odmah <i class="fas fa-chevron-right"></i>
+    </a>
+</header>
+
+
+<section class="home-cards">
+    <div *ngFor="let product of products">
+        <img [src]="getRandomImage()" alt="" />
+        <h3>{{ product.componentName }}</h3>
+        <p>
+            {{ product.description }}
+        </p>
+        <a href="#">Saznajte više <i class="fas fa-chevron-right"></i></a>
+    </div>
+</section>
+<!-- Noga stranice -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> Srpski (Srbija)</div>
+        <ul>
+            <li><a href="#">Mapa sajta</a></li>
+            <li><a href="#">Kontaktirajte nas</a></li>
+            <li><a href="#">Privatnost i kolačići</a></li>
+            <li><a href="#">Uslovi korišćenja</a></li>
+            <li><a href="#">Zaštitni znaci</a></li>
+            <li><a href="#">Sigurnost i ekologija</a></li>
+            <li><a href="#">&copy; PC Komponente 2023</a></li>
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,13 @@
+/* Dodatne stilizacije za navbar */
+.navbar {
+    background-color: #000000; /* Tamna boja pozadine menija */
+  }
+  
+  .navbar a.nav-link {
+    color: #000000 !important; /* Bela boja teksta linkova */
+  }
+  
+  .navbar a.nav-link:hover {
+    color: #ffcd00 !important; /* Boja teksta linkova na hover */
+  }
+  

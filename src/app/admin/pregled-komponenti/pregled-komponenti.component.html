@@ -1,0 +1,28 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="container mt-4">
+    <h2>Pregled Komponenti</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Naziv Komponente</th>
+                <th>Opis</th>
+                <th>Cena</th>
+                <th>Akcije</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let komponenta of komponente">
+                <td>{{ komponenta.id }}</td>
+                <td>{{ komponenta.componentName }}</td>
+                <td>{{ komponenta.description }}</td>
+                <td>{{ komponenta.price }}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="izmeni(komponenta.id)">Izmeni</button>
+                    <button class="btn btn-danger btn-sm" (click)="obrisi(komponenta.id)">Obriši</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

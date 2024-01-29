@@ -1,0 +1,30 @@
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="login-form">
+    <h1>Registracija</h1>
+  
+    <div class="txtb">
+      <input type="text" placeholder="Korisničko ime" formControlName="username">
+      <span data-placeholder="Korisničko ime"></span>
+    </div>
+  
+    <div class="txtb">
+      <input type="email" placeholder="Email adresa" formControlName="email">
+      <span data-placeholder="Email adresa"></span>
+    </div>
+  
+    <div class="txtb">
+      <input type="password" placeholder="Lozinka" formControlName="password">
+      <span data-placeholder="Lozinka"></span>
+    </div>
+  
+    <div class="txtb">
+      <input type="password" placeholder="Potvrdi lozinku">
+      <span data-placeholder="Potvrdi lozinku"></span>
+    </div>
+  
+    <input type="submit" class="logbtn" value="Registracija">
+  
+    <div class="bottom-text">
+      Već imate nalog? <a href="#">Prijavite se</a>
+    </div>
+  </form>
+  
